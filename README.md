@@ -3,14 +3,19 @@
 ## Requisitos para asistir al taller:
 
 
+
 ### Instalar Git (si no se tiene ya):
 
 ```bash
 $ \curl -sSL https://get-git.rvm.io | sudo bash
 ```
 
+ 
+ =====================================================================
+ 
 
 ### Instalar un gestor de versiones de Ruby (elegir solo uno):
+
 
 
 #### rbenv:
@@ -87,10 +92,9 @@ $ brew install rbenv ruby-build
 ```bash
 $ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 ```
-
+ 
  =====================================================================
-
-
+ 
  * Ver versiones de Ruby:
  ```bash
  $ rbenv install -l
@@ -121,6 +125,9 @@ $ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
  $ which ruby
  ```
 
+ 
+ =====================================================================
+ 
 
 #### RVM:
 
@@ -164,18 +171,30 @@ $ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
  $ which ruby
  ```
 
+ 
+ =====================================================================
+ 
 
-#### [RailsInstaller](http://railsinstaller.org)
+#### Si te parece muy complicado, puedes probar [RailsInstaller](http://railsinstaller.org)
 
+ 
+ =====================================================================
+ 
 
 ### Instalar [PostgreSQL](http://www.postgresql.org/download/) (si no se tiene ya).
 
+ 
+ =====================================================================
+ 
 
 ### Crearse una cuenta en [Heroku](https://id.heroku.com/signup) (si no se tiene ya).
 
 
 ### Instalar [Heroku Toolbelt](https://toolbelt.heroku.com) (si no se tiene ya).
 
+ 
+ =====================================================================
+ 
 
 ### Instalar las gemas que se van a usar:
 
@@ -194,3 +213,5 @@ $ gem install devise
 
 $ gem install twitter-bootstrap-rails
 ```
+
+
