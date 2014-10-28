@@ -1,106 +1,185 @@
-Ruby & Rails Workshop
-=====================
+# Ruby & Rails Workshop
 
-Requisitos para asistir al taller:
+## Requisitos para asistir al taller:
 
 
-Instalar Git (si no se tiene ya):
+### Instalar Git (si no se tiene ya):
 
+```bash
 $ \curl -sSL https://get-git.rvm.io | sudo bash
+```
 
 
-Instalar un gestor de versiones de Ruby (elegir solo uno):
+### Instalar un gestor de versiones de Ruby (elegir solo uno):
 
 
-rbenv:
+#### rbenv:
 
-Instalar rbenv: $ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+ * Instalar rbenv:
+ ```bash
+ $ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+ ```
 
-Añadir rbenv al $PATH:
+ * Añadir rbenv al $PATH:
 
-Mac: $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+ - Mac:
+ ```bash
+ $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+ ```
 
-Ubuntu: $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+ - Ubuntu:
+ ```bash
+ $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+ ```
 
-Zsh: $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
+ - Zsh:
+ ```bash
+ $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
+ ```
 
-Añadir rbenv al autocompletado:
+ * Añadir rbenv al autocompletado:
 
-Mac: $ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+ - Mac:
+ ```bash
+ $ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+ ```
 
-Ubuntu: $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+ - Ubuntu:
+ ```bash
+ $ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+ ```
 
-Zsh: $ echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+ - Zsh:
+ ```bash
+ $ echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+ ```
 
-Cerrar el terminal para reiniciar la shell y probar que se ha instalado correctamente: $ type rbenv
+ * Cerrar el terminal para reiniciar la shell y probar que se ha instalado correctamente:
+ ```bash
+ $ type rbenv
+ ```
 
-Instalar ruby-build: $ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+ * Instalar ruby-build:
+ ```bash
+ $ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+ ```
+ 
+ =====================================================================
+ 
+##### NOTA: Si se usa Mac, se puede instalar todo a través de Homebrew:
 
+ * Instalar Homebrew (si no se tiene ya):
+```bash
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
-NOTA: Si se usa Mac, se puede instalar a través de Homebrew:
+ * Actualizar Homebrew:
+```bash
+$ brew update
+```
 
-Instalar Homebrew (si no se tiene ya): $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+ * Instalar rbenv:
+```bash
+$ brew install rbenv ruby-build
+```
 
-Actualizar Homebrew: $ brew update
+ * Añadir rbenv al autocompletado:
+```bash
+$ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+```
 
-Instalar rbenv: $ brew install rbenv ruby-build
-
-Añadir rbenv al autocompletado: $ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-
-
-Ver versiones de Ruby: $ rbenv install -l
-
-Instalar una versión de Ruby: $ rbenv install 2.0.0-p247
-
-Usar una versión de Ruby por defecto: $ rbenv global 2.0.0-p247
-
-Recargar configuración de la shell: $ rbenv rehash
-
-Probar versión de Ruby: $ ruby -v
-
-Probar que se está usando rbenv: $ which ruby
-
-
-RVM:
-
-Instalar RVM: $ \curl -sSL https://get.rvm.io | bash -s stable --rails
-
-Recargar configuración de la shell: $ source ~/.rvm/scripts/rvm
-
-Probar que se ha instalado correctamente: $ type rvm | head -n 1
-
-Ver versiones de Ruby: $ rvm list known
-
-Instalar una versión de Ruby: $ rvm install 2.1.1
-
-Usar una versión de Ruby por defecto: $ rvm use 2.1.1 --default
-
-Probar versión de Ruby: $ ruby -v
-
-Probar que se está usando RVM: $ which ruby
-
-
-RailsInstaller:
-
-http://railsinstaller.org
-
-
-Instalar PostgreSQL (si no se tiene ya):
-
-http://www.postgresql.org/download/
-
-
-Crearse una cuenta en Heroku (si no se tiene ya):
-
-https://id.heroku.com/signup
-
-Instalar Heroku Toolbelt (si no se tiene ya):
-
-https://toolbelt.heroku.com
+ =====================================================================
 
 
-Instalar las gemas que se van a usar:
+ * Ver versiones de Ruby:
+ ```bash
+ $ rbenv install -l
+ ```
 
+ * Instalar una versión de Ruby:
+ ```bash
+ $ rbenv install 2.0.0-p247
+ ```
+
+ * Usar una versión de Ruby por defecto:
+ ```bash
+ $ rbenv global 2.0.0-p247
+ ```
+
+ * Recargar configuración de la shell:
+ ```bash
+ $ rbenv rehash
+ ```
+
+ * Probar versión de Ruby:
+ ```bash
+ $ ruby -v
+ ```
+
+ * Probar que se está usando rbenv:
+ ```bash
+ $ which ruby
+ ```
+
+
+#### RVM:
+
+ * Instalar RVM:
+ ```bash
+ $ \curl -sSL https://get.rvm.io | bash -s stable --rails
+ ```
+
+ * Recargar configuración de la shell:
+ ```bash
+ $ source ~/.rvm/scripts/rvm
+ ```
+
+ * Probar que se ha instalado correctamente:
+ ```bash
+ $ type rvm | head -n 1
+ ```
+
+ * Ver versiones de Ruby:
+ ```bash
+ $ rvm list known
+ ```
+
+ * Instalar una versión de Ruby:
+ ```bash
+ $ rvm install 2.1.1
+ ```
+
+ * Usar una versión de Ruby por defecto:
+ ```bash
+ $ rvm use 2.1.1 --default
+ ```
+
+ * Probar versión de Ruby:
+ ```bash
+ $ ruby -v
+ ```
+
+ * Probar que se está usando RVM:
+ ```bash
+ $ which ruby
+ ```
+
+
+#### [RailsInstaller](http://railsinstaller.org)
+
+
+### Instalar [PostgreSQL](http://www.postgresql.org/download/) (si no se tiene ya).
+
+
+### Crearse una cuenta en [Heroku](https://id.heroku.com/signup) (si no se tiene ya).
+
+
+### Instalar [Heroku Toolbelt](https://toolbelt.heroku.com) (si no se tiene ya).
+
+
+### Instalar las gemas que se van a usar:
+
+```bash
 $ gem install json
 
 $ gem install pg
@@ -114,3 +193,4 @@ $ gem install rails
 $ gem install devise
 
 $ gem install twitter-bootstrap-rails
+```
