@@ -199,6 +199,8 @@ $ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 ### Instalar las gemas que se van a usar:
 
 ```bash
+$ gem install bundler
+
 $ gem install json
 
 $ gem install pg
@@ -206,6 +208,8 @@ $ gem install pg
 $ gem install unicorn
 
 $ gem install sinatra
+
+$ gem install therubyracer
 
 $ gem install rails
 
