@@ -191,6 +191,10 @@ $ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 
 
 ### Instalar [Heroku Toolbelt](https://toolbelt.heroku.com) (si no se tiene ya).
+##### En Mac se puede instalar con:
+```bash
+$ brew install heroku-toolbelt
+```
 
  
  =====================================================================
